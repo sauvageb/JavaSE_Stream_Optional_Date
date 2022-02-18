@@ -17,6 +17,7 @@ package exercices.date;
  */
 class Exo5 {
 
+    // TODO : Les types Object peuvent doivent être remplacé par les bon types.
     public static void main(String[] args) {
 //        Object date1 = ;
 //        Object date2 = ;

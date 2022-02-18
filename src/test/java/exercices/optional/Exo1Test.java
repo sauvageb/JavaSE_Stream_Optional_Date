@@ -1,11 +1,8 @@
 package exercices.optional;
 
-import org.junit.Rule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.rules.ExpectedException;
 
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -54,7 +51,7 @@ class Exo1Test {
     @Test
     public void test_solution_1_findPhoneNumberByNameWithOptional_NotFound() {
         Optional<String> phoneNumber = exo1.findPhoneNumberByNameWithOptional("Jos de Voss");
-        phoneNumber.get();
+        Assertions.assertFalse(phoneNumber.isPresent());
     }
 
     @Test
@@ -65,7 +62,7 @@ class Exo1Test {
 
     @Test
     public void test_solution_2_findNameByPhoneNumber_NotFound() {
-        Optional<String> phoneNumber = exo1.findNameByPhoneNumberWithOptional("016/161619");
-        phoneNumber.get();
+        Optional<String> name = exo1.findNameByPhoneNumberWithOptional("016/161619");
+        Assertions.assertFalse(name.isPresent());
     }
 }

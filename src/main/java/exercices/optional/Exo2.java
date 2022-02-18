@@ -49,12 +49,12 @@ class Exo2 {
         try {
             Optional<String> phoneNumberOptional = exo2.findPhoneNumberByNameAndPunishIfNothingFoundWithOptional(nameSearch);
             phoneNumberOptional.get();
-        } catch (IllegalArgumentException e) {
+        } catch (Throwable e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public Optional<String> findPhoneNumberByNameAndPunishIfNothingFoundWithOptional(String name) {
+    public Optional<String> findPhoneNumberByNameAndPunishIfNothingFoundWithOptional(String name) throws Throwable {
         //TODO
         return null;
     }

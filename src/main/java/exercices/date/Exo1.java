@@ -22,8 +22,8 @@ class Exo1 {
         return new Date();
     }
 
-    // TODO
-//    public static Date getTodayWithJava8() {
-//        return new Date();
-//    }
+    // TODO : (Vous devez remplacer Object par le bon type de retour)
+    public static Object getTodayWithJava8() {
+        return null;
+    }
 }

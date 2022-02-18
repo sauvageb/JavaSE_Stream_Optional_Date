@@ -48,18 +48,16 @@ class Exo1 {
         // solutions
         System.out.println("Your Solution : ");
         Optional<String> phoneNumberOptional = exo1.findPhoneNumberByNameWithOptional(nameSearch);
-        System.out.printf("PhoneNumber is %s : result searched with name %s \n", phoneNumberOptional, nameSearch);
-        Optional<String> nameOptional = exo1.findPhoneNumberByNameWithOptional(phoneSearch);
-        System.out.printf("Name is %s : result searched with PhoneNumber %s \n", nameOptional, phoneSearch);
+        System.out.printf("PhoneNumber is %s : result searched with name %s \n", phoneNumberOptional.get(), nameSearch);
+        Optional<String> nameOptional = exo1.findNameByPhoneNumberWithOptional(phoneSearch);
+        System.out.printf("Name is %s : result searched with PhoneNumber %s \n", nameOptional.get(), phoneSearch);
     }
 
     public Optional<String> findPhoneNumberByNameWithOptional(String name) {
-        //TODO
         return null;
     }
 
     public Optional<String> findNameByPhoneNumberWithOptional(String phoneNumber) {
-        //TODO
         return null;
     }
 

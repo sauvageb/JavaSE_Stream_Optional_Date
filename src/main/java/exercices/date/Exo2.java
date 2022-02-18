@@ -20,6 +20,7 @@ class Exo2 {
         System.out.println("jour:" + day);
     }
 
+    // TODO : (Vous devez remplacer Object par le bon type de retour)
     private static Object getToday() {
         return null;
     }

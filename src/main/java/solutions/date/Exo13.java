@@ -19,11 +19,13 @@ import java.time.format.DateTimeFormatter;
 class Exo13 {
 
     public static void main(String[] args) {
-        LocalDateTime date = LocalDateTime.now();
+        String DATE_TIME_FR_PATTERN = "dd/MM/yyyy HH:mm:ss";
+        DateTimeFormatter format = DateTimeFormatter.ofPattern(DATE_TIME_FR_PATTERN);
 
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        LocalDateTime date = LocalDateTime.now();
+        System.out.println(date);
         String str = date.format(format);
-        System.out.println("Date converted to string :" + str);
+        System.out.println("Date converted to string : " + str);
 
         LocalDate date2 = LocalDate.parse(str, format);
         System.out.println("Date type : " + date2);

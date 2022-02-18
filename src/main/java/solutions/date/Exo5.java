@@ -1,6 +1,8 @@
 package solutions.date;
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.Month;
 import java.time.MonthDay;
 
 /*
@@ -25,7 +27,9 @@ class Exo5 {
         LocalDate today = LocalDate.now();
 
         MonthDay birthday = MonthDay.of(date1.getMonth(), date1.getDayOfMonth());
+//        MonthDay birthday = MonthDay.of(Month.JANUARY, 30);
         MonthDay currentMonthDay = MonthDay.from(today);
+//        MonthDay currentMonthDay = MonthDay.now();
 
         if (currentMonthDay.equals(birthday)) {
             System.out.println("C'est votre anniversaire");

@@ -1,6 +1,8 @@
 package solutions.stream;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.StringJoiner;
 import java.util.stream.Collectors;
 
 import static java.util.Arrays.asList;
@@ -30,19 +32,15 @@ public class Exo9 {
 
         String result2 = namesToStringWithStream(persons);
         System.out.println(result2);
+
     }
 
     public static String namesToString(List<Person> people) {
-        String label = "Names: ";
-        StringBuilder sb = new StringBuilder(label);
+        StringJoiner joiner = new StringJoiner(", ", "Names: ", ".");
         for (Person person : people) {
-            if (sb.length() > label.length()) {
-                sb.append(", ");
-            }
-            sb.append(person.getName());
+            joiner.add(person.getName());
         }
-        sb.append(".");
-        return sb.toString();
+        return joiner.toString();
     }
 
     public static String namesToStringWithStream(List<Person> people) {

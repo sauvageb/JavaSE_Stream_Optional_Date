@@ -25,9 +25,13 @@ public class Exo10 {
 
         String result1 = getString(values1);
         System.out.println(result1);
-
         String result2 = getString(values2);
         System.out.println(result2);
+
+        String result3 = getStringWithStream(values1);
+        System.out.println(result3);
+        String result4 = getStringWithStream(values2);
+        System.out.println(result4);
     }
 
     public static String getString(List<Integer> list) {

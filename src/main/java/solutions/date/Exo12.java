@@ -14,7 +14,7 @@ import java.time.temporal.ChronoUnit;
  * Affichez le nombre d'année, de mois et de jours écoulés (avec la classe Period)
  *
  * 2) La date Java 8 se précise avec une date + une heure : le 1er mars 2014 à 19h30 et 50 secondes
- * Affichez le nombre d'année, de mois et jours  ainsi que le nombre total d'heures, minutes et secondes écoulés (avec la classe Duration)
+ * Affichez le nombre d'années, de mois et jours  ainsi que le nombre total d'heures, minutes et secondes écoulés (avec la classe Duration)
  *
  * 3) : Vous pourrez utilisez ChronoUnit pour obtenir les données d'heures et de secondes par exemple
  *
@@ -50,8 +50,8 @@ class Exo12 {
         LocalDateTime date3 = date1.atTime(19, 30, 50);
         LocalDateTime today3 = LocalDateTime.now();
         long hours = ChronoUnit.HOURS.between(date3, today3);
-        long minutes = ChronoUnit.MINUTES.between(date3, today3);
-        long seconds = ChronoUnit.SECONDS.between(date3, today3);
+        long minutes = ChronoUnit.MINUTES.between(date3.plusHours(hours), today3);
+        long seconds = ChronoUnit.SECONDS.between(date3.plusHours(hours).plusMinutes(minutes), today3);
 
         System.out.println("il s'est écoulé " + hours + " heures, " + minutes + " minutes et " + seconds + " secondes");
     }

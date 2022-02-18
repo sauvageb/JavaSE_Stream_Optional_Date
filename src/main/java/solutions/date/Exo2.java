@@ -15,7 +15,8 @@ class Exo2 {
     public static void main(String[] args) {
         LocalDate today = getToday();
         int year = today.getYear();
-        int month = today.getMonth().getValue();
+        int month = today.getMonthValue();
+//        int month = today.getMonth().getValue();
         int day = today.getDayOfMonth();
         System.out.println("année:" + year);
         System.out.println("mois:" + month);

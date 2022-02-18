@@ -15,8 +15,8 @@ import java.time.LocalDate;
 class Exo3 {
 
     public static void main(String[] args) {
-        LocalDate date = LocalDate.of(2021, 11, 25);
-        System.out.println("Date du premier jour de ma formation java 8" + date);
+        LocalDate date = LocalDate.of(2021, 12, 13);
+        System.out.println("Date du premier jour de ma formation java 8 : " + date);
     }
 
 

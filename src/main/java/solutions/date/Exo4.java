@@ -18,7 +18,7 @@ import java.time.LocalDate;
 class Exo4 {
 
     public static void main(String[] args) {
-        LocalDate date1 = LocalDate.of(2021, 11, 25);
+        LocalDate date1 = LocalDate.of(2021, 12, 13);
         LocalDate date2 = LocalDate.now();
 
         if (date1.isEqual(date2)) {

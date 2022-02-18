@@ -27,7 +27,7 @@ class Exo8 {
         System.out.println("La date après une semaine est : " + nextWeek);
 
         //        2)
-        LocalDate lastTime = today.minusYears(1);
+        LocalDate lastTime = today.minus(1, ChronoUnit.YEARS);
         System.out.println("La date à laquelle nous nous sommes vu est le  : " + lastTime);
     }
 

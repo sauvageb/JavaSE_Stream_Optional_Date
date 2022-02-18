@@ -1,7 +1,9 @@
 package solutions.date;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.Locale;
 
 /*
  ** Consigne **
@@ -16,7 +18,7 @@ class Exo1 {
 
     public static void main(String[] args) {
 //        Date today = getToday();
-        LocalDateTime today = getTodayWithJava8();
+        ZonedDateTime today = getTodayWithJava8();
         System.out.println("Date d'aujourd'hui :" + today);
     }
 
@@ -24,7 +26,13 @@ class Exo1 {
         return new Date();
     }
 
-    public static LocalDateTime getTodayWithJava8() {
-        return LocalDateTime.now();
+    public static ZonedDateTime getTodayWithJava8() {
+        ZonedDateTime today = ZonedDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter
+                .ofPattern("E MMM dd hh:mm:ss z YYYY")
+                .withLocale(Locale.ENGLISH);
+
+        System.out.println(today.format(formatter));
+        return today;
     }
 }

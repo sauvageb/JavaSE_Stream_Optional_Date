@@ -1,6 +1,7 @@
 package solutions.date;
 
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 /*
  ** Consigne **
@@ -15,7 +16,10 @@ class Exo6 {
 
     public static void main(String[] args) {
         LocalTime time = LocalTime.now();
-        System.out.println("Heure actuelle sans la date : " + time);
+
+        DateTimeFormatter formatter = DateTimeFormatter
+                .ofPattern("HH:mm:ss");
+        System.out.println("Heure actuelle sans la date : " + time.format(formatter));
     }
 
 }
